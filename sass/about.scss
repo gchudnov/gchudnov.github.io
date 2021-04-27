@@ -1,0 +1,81 @@
+@import "./normalize.scss", "./text.scss";
+
+article {
+  padding-top: 0;
+  display: flex;
+  align-items: normal;
+  justify-content: left;
+}
+
+header {
+  height: 50px;
+
+  .profile-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 880px) {
+  body {
+    justify-content: flex-start;
+  }
+
+  nav {
+    justify-content: flex-end;
+  }
+
+  header {
+    display: flex;
+    margin: 0;
+  }
+
+  .lower {
+    display: none;
+  }
+
+  .profile {
+    display: none;
+  }
+
+  main {
+    margin-top: 2rem;
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+
+
+.profile {
+  margin-right: 48px;
+  flex-shrink: 0;
+  position: relative;
+
+  .profile-container {
+    width: 280px;
+    height: 373px;
+    animation: profile infinite 10s;
+    background: white;
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-color);
+    z-index: -1;
+  }
+
+  &:after {
+    animation: front infinite 10s;
+    opacity: 0.5;
+  }
+
+  &:before {
+    animation: back infinite 10s;
+    opacity: 0.25;
+  }
+}
