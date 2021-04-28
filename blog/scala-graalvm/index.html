@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #2F3E74;
+        --accent-color-light: #5B70C2;
+      }
+    </style>
+
+    <meta name="theme-color" content="#2F3E74" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;59c2175299dd8f5f00.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;59c2175299dd8f5f00.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;992905219f00490d00.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;bab7725f28b7c84700.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;7cfd1e73990c41e400.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;cca0bacdd802df1d00.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;d0bda1af8f7428e700.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;dd330683996c955e00.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;6b7aef7b1abfd58000.jpg" />
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Building a Native Executable or Library for a Scala Application" />
+        <meta name="twitter:description" content="Building a Native Executable or Library for a Scala Application">
+      
+    
+
+    
+      <meta name="twitter:title" content="Building Native Scala Applications with GraalVM">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;about&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;5d1dba0a993460d500.jpg" />
+
+    <title>
+      
+        
+          Building Native Scala Applications with GraalVM
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://gchudnov.github.io/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;tags&#x2F;scala&#x2F;">
+  
+    <link rel="prerender"  href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;tags&#x2F;graalvm&#x2F;">
+  
+    <link rel="prerender"  href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;tags&#x2F;native-image&#x2F;">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Building Native Scala Applications with GraalVM",
+      "image": [],
+      "datePublished": "2021-04-15T00:00:00+00:00",
+      "dateModified": "2021-04-15T00:00:00+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "Grigorii Chudnov"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "Grigorii Chudnov",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://gchudnov.github.io/icon-gchudnov.jpg"
+        }
+        
+      }
+      
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "",
+          "item": "https://gchudnov.github.io/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "",
+          "item": "https://gchudnov.github.io/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Building Native Scala Applications with GraalVM",
+          "item": "https://gchudnov.github.io/blog/scala-graalvm/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img
+            src="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;5d1dba0a993460d500.jpg"
+            srcset="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;5d1dba0a993460d500.jpg 50w, https:&#x2F;&#x2F;gchudnov.github.io&#x2F;processed_images&#x2F;7cfd1e73990c41e400.jpg 144w"
+            sizes="50vw"
+            alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+            <a href="&#x2F;about&#x2F;">About</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Building Native Scala Applications with GraalVM</h1>
+    <small>
+      April 15, 2021
+      
+        - 
+        <span class="tags">
+          
+            <a href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;tags&#x2F;scala&#x2F;">scala</a>
+          
+            <a href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;tags&#x2F;graalvm&#x2F;">graalvm</a>
+          
+            <a href="https:&#x2F;&#x2F;gchudnov.github.io&#x2F;tags&#x2F;native-image&#x2F;">native-image</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <p>GraalVM is a high-performance JDK distribution. It allows execution of applications written in JVM languages (Java, Scala, Kotlin, ...) and supports popular non-JVM languages: JavaScript, Ruby, Python, R.</p>
+<p>These languages can interoperate with the help of the Truffle Framework - a framework for writing interpreters for programming languages. In this way, several programming languages can be mixed in a single application where they can directly interact in the same memory space without overhead.</p>
+<h2 id="graalvm-overview">GraalVM Overview</h2>
+<p><img src="https://gchudnov.github.io/blog/scala-graalvm/graal-vm-overview.png" alt="graal-vm-overview.png" /></p>
+<p>Features</p>
+<ul>
+<li>High Performance</li>
+<li>Language Interoperability</li>
+<li>Just-in-Time (JIT) compilation</li>
+<li>Ahead-of-Time (AOT) compilation</li>
+</ul>
+<h2 id="graalvm-modes">GraalVM Modes</h2>
+<p><img src="https://gchudnov.github.io/blog/scala-graalvm/graal-vm-modes.png" alt="graal-vm-modes.png" /></p>
+<p>GraalVM offers several runtime Modes:</p>
+<ul>
+<li>
+<p>(1) JIT (Just-in-Time Compilation) - application is loaded and executed normally on the HotSpot VM with the GraalVM compiler. In this case bytecode goes to the compiler, being compiled into the machine code and runs after that.</p>
+</li>
+<li>
+<p>(2) AOT (Ahead-of-Time Compilation) - application code is compiled into a binary executable or a shared library. The final binary is self-contained, specific to the operating system and machine architecture it is built on, and does not require a JVM to run.</p>
+</li>
+</ul>
+<h2 id="graalvm-mode-tradeoffs">GraalVM Mode Tradeoffs</h2>
+<p><img src="https://gchudnov.github.io/blog/scala-graalvm/graal-vm-mode-tradeoffs.png" alt="graal-vm-mode-tradeoffs.png" /></p>
+<p>With different modes of execution, JIT and AOT, there are some inherent trade-offs.</p>
+<p>JIT - with the help of Just-in-Time (JIT) optimizing compilers we're eventually getting higher throughput and lower latency: at runtime, the information about the application is gathered and can be used later to create fast and optimized machine code.</p>
+<p>AOT - the code is compiled once and, when started, we do not have means to interpret it in a different way or gather profiling feedback in order to optimize it during execution. However, an application starts faster and has a small memory footprint.</p>
+<h2 id="graalvm-goals">GraalVM Goals</h2>
+<p><img src="https://gchudnov.github.io/blog/scala-graalvm/graal-vm-mode-goals.png" alt="graal-vm-mode-goals.png" /></p>
+<p>One of the GraalVM goals is to improve the performance of languages that run on the JVM.</p>
+<p>To accomplish that in AOT mode, GraalVM Enterprise Edition incorporates Profile-Guided Optimization (PGO)<sup class="footnote-reference"><a href="#1">1</a></sup>. PGO adds the possibility to instrument binary executable, collect the profiling information and use it to optimize the performance of the resulting binary later.</p>
+<h2 id="graalvm-ahead-of-time-compilation-aot-mode">GraalVM Ahead-of-Time Compilation (AOT) Mode</h2>
+<ul>
+<li>Allows to compile your JVM application into a single executable / library</li>
+<li>Instant startup</li>
+<li>Low memory footprint</li>
+<li>AOT eventual throughput <em>might be</em><sup class="footnote-reference"><a href="#2">2</a></sup> lower comparing to JIT
+<ul>
+<li>JIT has better knowledge about how the application works, has the profiling feedback</li>
+<li>run with PGO to optimize the execution if available.</li>
+</ul>
+</li>
+<li>AOT latencies <em>might be</em><sup class="footnote-reference"><a href="#2">2</a></sup> worse
+<ul>
+<li>By default there is a regular Serial GC (optimized for low memory footprint and small heap sizes)</li>
+<li>More advanced GCs are available in GraalVM Enterprise Edition</li>
+</ul>
+</li>
+</ul>
+<h2 id="graalvm-native-image-creation">GraalVM Native Image Creation</h2>
+<p><img src="https://gchudnov.github.io/blog/scala-graalvm/graal-vm-native-image-process.png" alt="graal-vm-native-image-process.png" /></p>
+<p>To build a native executable (or a shared library), a native-image building tool should be used.</p>
+<p>As an input, native-image takes application classes, JDK libraries, 3rd-party libraries, resources and  Substrate VM (deoptimizer, garbage collector (GC), thread scheduling).</p>
+<p>Then it runs an aggressive static analysis, where all classes, packages, etc. that are reachable at run time must be known at build time ('closed-world' assumption). As a result it produces a binary that is OS and architecture specific, without dependency on JDK (unless a fallback option is specified).</p>
+<h2 id="building-a-native-executable-for-a-scala-application">Building a Native Executable for a Scala Application</h2>
+<p><img src="https://gchudnov.github.io/blog/scala-graalvm/graal-vm-building-scala-process.png" alt="graal-vm-building-scala-process.png" /></p>
+<p>There are 3 steps to build a native Scala application:</p>
+<ol>
+<li>Install GraalVM</li>
+<li>Prepare configuration for the application</li>
+<li>Build it</li>
+</ol>
+<p>The main part here is to prepare the configuration. Without proper configuration there is a high chance of errors either on build- or run-time.</p>
+<h2 id="installing-graalvm">Installing GraalVM</h2>
+<p>One way to get GraalVM is to use <a href="https://sdkman.io/">sdkman.io</a> that provides a Command Line Interface (CLI) for installing, using and removing various Software Development Kits.</p>
+<pre><code class="language-bash" data-lang="bash">$ sdk list java
+$ sdk install java 21.0.0.2.r11-grl
+$ sdk use java 21.0.0.2.r11-grl
+# Using java version 21.0.0.2.r11-grl in this shell.
+$ gu install native-image
+</code></pre>
+<p>Here <code>gu</code> is a command-line utility to install and manage optional GraalVM components.</p>
+<pre><code class="language-text" data-lang="text">================================================================================
+Available Java Versions
+================================================================================
+ Vendor        | Use | Version      | Dist    | Status     | Identifier
+--------------------------------------------------------------------------------
+ GraalVM       |     | 21.0.0.2.r11 | grl     | installed  | 21.0.0.2.r11-grl    
+               |     | 21.0.0.2.r8  | grl     |            | 21.0.0.2.r8-grl     
+               |     | 20.3.1.2.r11 | grl     |            | 20.3.1.2.r11-grl    
+</code></pre>
+<h2 id="prepare-configuration-for-the-application">Prepare Configuration for the Application</h2>
+<h3 id="use-tracing-agent-to-find-all-usages-of-dynamic-features">Use tracing agent to find all usages of dynamic features</h3>
+<p>The build operation relies on a static analysis of the reachable code. However, static analysis cannot trace all uses of Java Reflection, Java Native Interface (JNI), Dynamic Proxy objects (<code>java.lang.reflect.Proxy</code>), or class path resources (<code>Class.getResource</code>). These dynamic features should be specified in configuration files (require configuration at build time).</p>
+<p>GraalVM provides an agent that helps to trace all dynamic features, used in the application, and create configuration files.</p>
+<p>To use the agent, we need to run the app with <code>-agentlib:native-image-agent</code> parameter in JVM-environment. During this execution, the agent intercepts all calls that look up classes, methods, resources and on exit generates configuration files:</p>
+<ul>
+<li>jni-config.json</li>
+<li>reflect-config.json</li>
+<li>proxy-config.json</li>
+<li>resource-config.json</li>
+</ul>
+<p>These files will be used to build a binary image.</p>
+<p>It might be worth running an application several times to cover different use-cases and merge configuration files after that (merging can be automated).</p>
+<pre><code class="language-bash" data-lang="bash">$ export META_INF_DIR=./module/main/resources/META-INF/native-image
+$ java \
+-agentlib:native-image-agent=config-output-dir=”${META_INF_DIR}” \
+-jar ./target/app.jar [...other options if needed]
+</code></pre>
+<pre><code class="language-text" data-lang="text">module
+  src
+    main
+      resources
+        META-INF/native-image
+          jni-config.json
+          proxy-config.json
+          reflect-config.json
+          resource-config.json
+          serialization-config.json
+</code></pre>
+<p>As an alternative, instead of <code>META-INF/native-image</code> a more specific path, <code>META-INF/native-image/groupID/artifactID/</code> can be used.</p>
+<h3 id="build-fat-jar">Build Fat JAR</h3>
+<p>Create a fat JAR of your project with all of its dependencies, for example with <a href="https://github.com/sbt/sbt-assembly">sbt-assembly</a> plugin.</p>
+<p>in <code>build.sbt</code>:</p>
+<pre><code class="language-sbt" data-lang="sbt">lazy val app = (project in file(&quot;module&quot;))
+ .dependsOn(...)
+ .settings(Settings.assemblySettings)
+ .settings(
+   name := &quot;app&quot;,
+   libraryDependencies ++= Dependencies.App,
+   assembly / mainClass := Some(&quot;org.module.app&quot;),
+   assembly / assemblyOutputPath := new File(s&quot;./target/${name.value}.jar&quot;),
+   assembly / assemblyJarName := s&quot;${name.value}&quot;
+ )
+</code></pre>
+<h3 id="edit-configuration-optional">Edit Configuration (Optional)</h3>
+<p>The resulting configurations could be too complex OR there can be missing elements. It is recommended to review the generated configuration files (<em>jni-config.json, reflect-config.json, proxy-config.json, resource-config.json</em>)</p>
+<p>For example, it might be worth to remove references to Lambda objects:</p>
+<p><code>ZIO$AccessPartiallyApplied$$$Lambda$32/0x00000008400c2040</code></p>
+<h3 id="build-a-native-executable">Build a Native Executable</h3>
+<p>At the end we need to invoke <code>native-image</code> utility. We can provide additional options (OR, as an alternative, it is possible to create a properties-file inside <code>META-INF/native-image</code> directory).</p>
+<p>An example of the build command:</p>
+<pre><code class="language-bash" data-lang="bash">$ native-image \
+ --verbose \
+ --initialize-at-build-time=&quot;${BUILD_INIT_LIST}&quot; \
+ --initialize-at-run-time=&quot;${RUNTIME_INIT_LIST}&quot; \
+ --no-fallback \
+ --allow-incomplete-classpath \
+ --enable-http \
+ --enable-https \
+ -H:+ReportUnsupportedElementsAtRuntime \
+ -H:+ReportExceptionStackTraces \
+ -jar &quot;${APP_JAR_PATH}&quot; &quot;${APP_NAME}&quot;
+</code></pre>
+<p>Please consult the <a href="https://www.graalvm.org/reference-manual/native-image/Options/">documentation</a> for the list of available options and their description.</p>
+<p>Output:</p>
+<pre><code class="language-text" data-lang="text">. . .
+
+[app:3942]    classlist:   6,662.52 ms,  0.96 GB
+[app:3942]        (cap):   1,000.09 ms,  0.96 GB
+[app:3942]        setup:   3,337.82 ms,  0.96 GB
+[app:3942]     (clinit):   1,836.09 ms,  3.27 GB
+[app:3942]   (typeflow):  64,895.79 ms,  3.27 GB
+[app:3942]    (objects):  55,283.05 ms,  3.27 GB
+[app:3942]   (features):   3,300.29 ms,  3.27 GB
+[app:3942]     analysis: 128,536.69 ms,  3.27 GB
+[app:3942]     universe:   5,633.38 ms,  3.27 GB
+[app:3942]      (parse):  36,065.82 ms,  4.31 GB
+[app:3942]     (inline):  36,724.26 ms,  6.05 GB
+[app:3942]    (compile):  97,866.60 ms,  6.47 GB
+[app:3942]      compile: 174,217.81 ms,  6.47 GB
+[app:3942]        image:   5,525.45 ms,  6.47 GB
+[app:3942]        write:   1,353.10 ms,  6.47 GB
+[app:3942]      [total]: 325,781.52 ms,  6.47 GB
+
+. . .
+</code></pre>
+<p>After execution (might take time) the binary executable will be created. In case of warnings/errors it might be needed to update the configuration-files  and rebuild the application after that.</p>
+<h2 id="example">Example</h2>
+<p>As an example, a <a href="https://github.com/gchudnov/kprojekt">project</a> that was built with GraalVM using the guidelines, provided in this article.</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>native-image feature in GraalVM is <a href="https://www.graalvm.org/docs/introduction/#features-support">production ready</a>.</li>
+<li>Use native-image if you care about startup time and memory footprint
+<ul>
+<li>Unfortunately, PGO and more advanced GCs are available only in Enterprise Edition</li>
+</ul>
+</li>
+<li>native-image support in 3rd-party libraries is getting better
+<ul>
+<li><code>META-INF/native-image</code> configuration in libraries: netty, aws-sdk-2, ...</li>
+</ul>
+</li>
+</ul>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>At the moment of writing, PGO is not available in GraalVM Community Edition, CE</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p><strong>Always measure</strong>, the performance is heavily dependent on a use-case.</p>
+</div>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+  </body>
+</html>
